@@ -58,7 +58,8 @@
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.function.elixir</string>
+					<!-- Module.function() -->
+					<string>entity.name.function.elixir.module</string>
 				</dict>
 			</dict>
 			<key>match</key>
@@ -80,34 +81,19 @@
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.function.elixir</string>
+					<!-- :erlang.function() -->
+					<string>entity.name.function.elixir.erlang</string>
 				</dict>
 			</dict>
 			<key>match</key>
 			<string>(\:\w+)\s*(\.)\s*([_]?\w*[!?]?)</string>
 		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.operator.other.elixir</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.function.elixir</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>(\|\>)\s*([a-z_]\w*[!?]?)</string>
-		</dict>
-		<dict>
+ 		<dict>
 			<key>match</key>
 			<string>\b[a-z_]\w*[!?]?(?=\s*\.?\s*\()</string>
 			<key>name</key>
-			<string>entity.name.function.elixir</string>
+			<!-- function() -->
+			<string>entity.name.function.elixir.local</string>
 		</dict>
 		<dict>
 			<key>begin</key>
